@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Things to do</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Things to do</h1>
+    </header>
+    <div class="container">
+        <form id="form">
+            <div class="formPtOne">
+                <p>Title</p>
+                <input type="text" placeholder="Title" id="newTitle" />
+            </div>
+            <div class="formPtTwo">
+                <p>Description</p>
+               <!--<input type="text" placeholder="Description" id="newDescription" />-->
+                <textarea placeholder="Description" id="newDescription"></textarea>
+            </div>
+            <div class="button">
+                <input type="submit" value="Add" id="add" />
+            </div>
+        </form>
+        <div id="editTasks">
+            <!--<form id="formTwo">
+                <input type="text" placeholder="Title" id="newTitleEdit" />
+                <input type="text" placeholder="Description" id="newDescriptionEdit" />
+                <div id="buttoms">
+                    <input type="button" value="✔" id="ok" />
+                    <input type="button" value="X" id="cancelEdit">
+                </div>
+            </form>-->
+        </div>
+        <table class="table">
+            <thead>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </thead>
+            <tbody id="items-list">
+            </tbody>
+        </table>
+    </div>
+    <script src="./js/app.js" type="text/javascript"></script>
+</body>
+
+</html>
