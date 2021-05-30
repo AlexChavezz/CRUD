@@ -2,7 +2,11 @@ class Item {
     constructor(title, description,) {
         this.title = title;
         this.description = description;
-
+        this.date = {
+            day: new Date().getDay(),
+            month: new Date().getMonth(),
+            year: new Date().getFullYear(),
+        }
     }
 }
 class UI {
@@ -27,6 +31,7 @@ class UI {
         //editItemImg.className = 'editItem-fromlist';
 
         row.innerHTML = `
+        <td>${item.date.day} / ${item.date.month} / ${item.date.year}</td>
         <td>${item.title}</td>
         <td>${item.description}</td>
         <td></td>`;
