@@ -3,12 +3,13 @@ class Item {
         this.title = title;
         this.description = description;
         this.date = {
-            day: new Date().getDay(),
+            day: new Date().getDate(),
             month: new Date().getMonth(),
             year: new Date().getFullYear(),
         }
     }
 }
+
 class UI {
     static showItem() {
         const items = Datos.getItems();
@@ -42,7 +43,6 @@ class UI {
     static deleteItem(target) {
         if (target.classList.contains('deleteItem-fromlist')) {
             const tr = target.parentElement.parentElement;
-            console.log(tr);
             tr.remove();
         } else {
         }
@@ -157,3 +157,8 @@ document.querySelector('#items-list').addEventListener('click', (e) => {
 
     }
 });
+
+
+const date = new Date();
+
+console.log(date.getDate());
